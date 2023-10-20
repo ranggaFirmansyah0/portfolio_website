@@ -19,7 +19,7 @@ export default function Navbar() {
 				<a href="" className="hover:opacity-100 opacity-90">
 					<BsGithub size="24" />
 				</a>
-				<a href="" className="bg-[#f5f5f5] text-[#212121] py-1 px-2 rounded-sm opacity-90 hover:opacity-100">Contact Me</a>
+				<a href="#contact" className="bg-[#f5f5f5] text-[#212121] py-1 px-2 rounded-sm opacity-90 hover:opacity-100">Contact Me</a>
 			</div>
 		</div>
 	);
