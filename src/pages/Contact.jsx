@@ -19,7 +19,7 @@ const inputStyle = "bg-transparent p-2 text-[18px] outline-0 border-2 border-bla
 
 export default function Contact(){
 	return(
-		<div id="contact" className="pt-[110px] h-screen text-[#f5f5f5] flex">
+		<div id="contact" className="h-screen text-[#f5f5f5] flex">
 			<div className="flex flex-1 flex-col h-full items-center justify-center">
 				<div>
 					<div className="text-6xl font-light mb-6">My Contact</div>

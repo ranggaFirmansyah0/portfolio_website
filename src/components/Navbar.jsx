@@ -1,14 +1,15 @@
 import { Link } from 'react-scroll';
 import ranggaLogo from '../images/rangga-logo.png';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 export default function Navbar() {
 	return(
-		<div className="fixed w-full bg-[#212121] flex text-[#f5f5f5] py-6 items-center justify-around z-50">
-			<div className="flex-1">
-				<img src={ranggaLogo} className="w-14 mx-auto"/>
+		<div className="fixed w-full bg-[#212121] flex text-[#f5f5f5] py-2 px-2 md:py-6 items-center justify-between z-50">
+			<div className="md:flex-1 flex justify-center items-center">
+				<img src={ranggaLogo} className="w-[13vw] sm:w-12 md:w-14"/>
 			</div>
-			<ul className="flex gap-6 flex-1 justify-center">
+			<ul className="hidden md:flex gap-6 md:flex-1 justify-center">
 				<li className="hover:font-medium hover:text-white">
 					<Link 
 						to="home" 
@@ -43,7 +44,7 @@ export default function Navbar() {
 					</Link>
 				</li>
 			</ul>
-			<div className="flex gap-4 items-center flex-1 justify-center">
+			<div className="hidden md:flex gap-4 items-center md:flex-1 justify-center">
 				<a href="" className="hover:opacity-100 opacity-90">
 					<BsLinkedin size="24"/>
 				</a>
@@ -59,6 +60,9 @@ export default function Navbar() {
 					>
 						Contact Me
 				</Link>
+			</div>
+			<div className="w-[13vw] sm:w-12 md:w-14 flex md:flex-1 md:hidden text-[#f5f5f5] items-center justify-center">
+				<GiHamburgerMenu className="text-[6.5vw] sm:text-[26px] md:text-[30px] opacity-90 hover:opacity-100 cursor-pointer" />
 			</div>
 		</div>
 	);

@@ -31,17 +31,17 @@ export default function SkillSet() {
 	return (
 		<div className="max-w-[60%] w-full flex flex-col items-center mt-8 border-2 border-white p-4">
 			<p className="w-full">I have worked with : </p>
-			<div className="flex gap-2 mt-4">
+			<div className="flex flex-wrap gap-2 mt-4">
 				<SkillIcon name="HTML" />
-		        <SkillIcon name="CSS" />
-		        <SkillIcon name="Javascript" />
-		        <SkillIcon name="React" />
-		        <SkillIcon name="Tailwind" />
-		        <SkillIcon name="Bootstrap" />
-		        <SkillIcon name="Node.js" />
-		        <SkillIcon name="Vite" />
-		        <SkillIcon name="Git" />
-		        <SkillIcon name="GitHub" />
+		    <SkillIcon name="CSS" />
+		    <SkillIcon name="Javascript" />
+		    <SkillIcon name="React" />
+		    <SkillIcon name="Tailwind" />
+		    <SkillIcon name="Bootstrap" />
+		    <SkillIcon name="Node.js" />
+		    <SkillIcon name="Vite" />
+		    <SkillIcon name="Git" />
+		    <SkillIcon name="GitHub" />
 			</div>
 		</div>
 	)
