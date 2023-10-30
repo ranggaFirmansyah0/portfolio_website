@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import ranggaLogo from '../images/rangga-logo.png';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
@@ -17,12 +17,27 @@ export default function Navbar() {
 	   setMenuDisplay('hidden');
 	};
 
+	useEffect(() => {
+	  const handleResize = () => {
+	    if (window.innerWidth >= 768) {
+	      setMenuDisplay('hidden');
+	    }
+	  };
+
+	  window.addEventListener('resize', handleResize);
+
+	  return () => {
+	    window.removeEventListener('resize', handleResize);
+	  };
+	}, []);
+
+
 	return(
 		<div className="fixed w-full bg-[#212121] flex text-[#f5f5f5] py-2 px-2 md:py-6 items-center justify-between z-50">
 			<div className="md:flex-1 flex justify-center items-center">
 				<img src={ranggaLogo} className="w-[13vw] sm:w-12 md:w-14"/>
 			</div>
-			<ul className={`${menuDisplay} bg-[#212121] md:flex flex-col absolute right-0 top-0 p-4 text-[5vw] sm:text-[3vw] md:text-[1rem] md:p-0 md:flex-row md:static gap-6 md:flex-1 justify-center`}>
+			<ul id="pagination" className={`${menuDisplay} bg-[#212121] md:flex flex-col absolute right-0 top-0 p-4 text-[6vw] sm:text-[3.7vw] md:text-[1rem] md:p-0 md:flex-row md:static gap-6 md:flex-1 justify-center`}>
 				<IoClose onClick={closeMenu} className="w-full translate-x-[9px] text-[9vw] mb-4 md:hidden sm:text-[34px] md:text-[3px] opacity-90 hover:opacity-100 cursor-pointer" />
 				<li className="hover:font-medium hover:text-white">
 					<Link 
@@ -57,20 +72,29 @@ export default function Navbar() {
 							Project
 					</Link>
 				</li>
+				<Link 
+					to="contact" 
+					spy={true} 
+					smooth={true} 
+					duration={300}
+					className="md:hidden cursor-pointer hover:font-medium hover:text-white"
+					>
+						Contact
+				</Link>
 			</ul>
-			<div className="hidden md:flex gap-4 items-center md:flex-1 justify-center">
+			<div id="social" className="fixed bottom-[5vh] right-[5vw] bg-[#212121] p-2 md:p-0 md:static md:flex flex-col md:flex-row gap-4 items-center md:flex-1 justify-center">
 				<a href="" className="hover:opacity-100 opacity-90">
-					<BsLinkedin size="24"/>
+					<BsLinkedin className="text-[30px] md:text-[24px] mb-2 md:mb-0" />
 				</a>
 				<a href="" className="hover:opacity-100 opacity-90">
-					<BsGithub size="24" />
+					<BsGithub className="text-[30px] md:text-[24px]" />
 				</a>
 				<Link 
 					to="contact" 
 					spy={true} 
 					smooth={true} 
 					duration={300}
-					className="cursor-pointer bg-[#f5f5f5] text-[#212121] py-1 px-2 rounded-sm opacity-90 hover:opacity-100"
+					className="hidden md:block cursor-pointer bg-[#f5f5f5] text-[#212121] py-1 px-2 rounded-sm opacity-90 hover:opacity-100"
 					>
 						Contact Me
 				</Link>
