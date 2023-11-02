@@ -29,7 +29,7 @@ const SkillIcon = ({name}) => <img src={imageMap[name]} title={name} className="
 export default function SkillSet() {
 
 	return (
-		<div className="max-w-[60%] w-full flex flex-col items-center mt-8 border-2 border-white p-4">
+		<div className="w-full flex flex-col items-center mt-10 border-2 border-white p-4">
 			<p className="w-full">I have worked with : </p>
 			<div className="flex flex-wrap gap-2 mt-4">
 				<SkillIcon name="HTML" />

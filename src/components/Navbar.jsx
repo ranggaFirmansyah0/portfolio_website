@@ -37,7 +37,7 @@ export default function Navbar() {
 			<div className="md:flex-1 flex justify-center items-center">
 				<img src={ranggaLogo} className="w-[13vw] sm:w-[11vw] x-sm:w-[9vw] md:w-14"/>
 			</div>
-			<ul id="pagination" className={`${menuDisplay} bg-[#212121] md:flex flex-col absolute right-0 top-0 p-4 text-[6vw] md:text-[1rem] md:p-0 md:flex-row md:static gap-6 md:flex-1 justify-center`}>
+			<ul id="pagination" className={`${menuDisplay} bg-[#212121] md:flex flex-col absolute right-0 top-0 p-4 text-[6vw] sm:text-[5vw] x-sm:text-[4vw] md:text-[1rem] md:p-0 md:flex-row md:static gap-6 md:flex-1 justify-center`}>
 				<div className="w-full text-[9vw] mb-4 md:hidden sm:text-[38px] translate-x-[3px] -translate-y-[3px] flex justify-end">
 					<IoClose onClick={closeMenu} className="opacity-90 hover:opacity-100 cursor-pointer" />
 				</div>
