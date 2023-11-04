@@ -10,8 +10,6 @@ export default function App() {
       <Navbar />
       <Home />
       <About />
-      <Project />
-      <Contact />
     </>
     )
 }
